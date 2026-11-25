@@ -5,7 +5,7 @@ module OptEnvConf.Terminal
   )
 where
 
-#if !defined(mingw32_HOST_OS)
+#if !defined(mingw32_HOST_OS) && !defined(wasm32_HOST_ARCH)
 import Text.Colour.Capabilities.FromEnv (getTerminalCapabilitiesFromHandle)
 #else
 import System.IO (Handle, hIsTerminalDevice)

@@ -37,6 +37,6 @@ library:
   - validity-text
   - validity-containers
   when:
-    - condition: "!os(windows)"
+    - condition: "!os(windows) && !arch(wasm32)"
       dependencies:
         - safe-coloured-text-terminfo
